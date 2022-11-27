@@ -32,5 +32,5 @@
         android:layout_marginStart="@dimen/activity_horizontal_margin"
         android:text="Rs. 1200.00"
         app:layout_constraintStart_toEndOf="@+id/ivProduct"
-        app:layout_constraintTop_toButtomOf="@+id/tvName" />
+        app:layout_constraintTop_toBottomOf="@+id/tvName" />
 </androidx.constraintlayout.widget.ConstraintLayout>
