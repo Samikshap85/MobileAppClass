@@ -1,9 +1,11 @@
 package com.example.becomputer;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,7 +13,8 @@ import android.widget.Toast;
 
 
 public class SignupActivity extends AppCompatActivity {
-    private String username, fullname, email, password;
+   //variable declaration
+   private String username, fullname, email, password;
     private EditText etUsername, etFullname, etEmail, etPassword;
     private Button btSignup;
 
@@ -40,11 +43,19 @@ public class SignupActivity extends AppCompatActivity {
                 }
             }
 
-            ;
+
 
         });
+        setAppBar();
     }
 
+    protected void setAppBar(){
+        if (getSupportActionBar()!= null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setHomeButtonEnabled(true); //creating an app bar i.e back buttom
+        }
+
+    }
 
     private boolean meroValidation() {
         username = etUsername.getText().toString();
@@ -69,5 +80,14 @@ public class SignupActivity extends AppCompatActivity {
             return false;
         }
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) { //button select huda k garne vani kura yeta declare garinxa , menu iteam ley chai tyo iteam ko id dinxa
+        if(item.getItemId()== android.R.id.home)//id of back button (given by android)
+        {
+           onBackPressed(); //backbutton run hunxa
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

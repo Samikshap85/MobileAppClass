@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class LoginActivity extends AppCompatActivity {
-    Button btLogin;
+    Button btLogin , btSignup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +27,18 @@ public class LoginActivity extends AppCompatActivity {
 
                 );
                 startActivity(intent);
+
+            }
+        });
+        btSignup = findViewById(R.id.btSignup);
+        btSignup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(
+                        LoginActivity.this,SignupActivity.class //chnaging activity from login to signin page
+                );
+                startActivity(intent);
+                //finish(); this is used to finish the actiity and close the application
 
             }
         });
