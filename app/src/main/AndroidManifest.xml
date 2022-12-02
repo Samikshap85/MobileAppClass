@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.becomputer">
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -16,6 +17,11 @@
         <activity
             android:name=".ProductActivity"
             android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" /> <!-- intend filter is used to show which page to launch first -->
+            </intent-filter>
 
     </activity>
         <activity
@@ -29,11 +35,7 @@
             android:exported="true"></activity>
         <activity
             android:name=".LoginActivity"
-            android:exported="true" ><intent-filter>
-        <action android:name="android.intent.action.MAIN" />
-
-        <category android:name="android.intent.category.LAUNCHER" /> <!-- intend filter is used to show which page to launch first -->
-        </intent-filter> </activity>
+            android:exported="true" > </activity>
     </application>
 
 </manifest>

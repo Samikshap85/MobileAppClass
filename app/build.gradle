@@ -51,4 +51,8 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0' //library for gson converter
     implementation 'com.squareup.okhttp3:logging-interceptor:4.9.3' //library for intercepting the network class
 
+    //image loading library
+    implementation 'com.github.bumptech.glide:glide:4.14.2'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.14.2'
+
 }

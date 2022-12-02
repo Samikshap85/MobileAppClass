@@ -9,7 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ApiClient {
     public static Retrofit retrofit= null;
     public  static Retrofit getClient(){
-        if(retrofit==null) {
+        if(retrofit==null) { //API call if not called
             HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
             logging.setLevel(HttpLoggingInterceptor.Level.BODY);
 
