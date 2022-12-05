@@ -8,4 +8,7 @@
     <string name="txtNoAccount">"Don't have an account "</string>
     <string name="txtSignup">Signup</string>
     <string name="NoAccount">Don\'t have an account</string>
+    <string name="txtAddRecord">Add Record</string>
+    <string name="removeRecord">Remove Record</string>
+
 </resources>
