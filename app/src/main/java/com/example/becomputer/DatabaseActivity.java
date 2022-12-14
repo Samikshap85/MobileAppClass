@@ -3,6 +3,7 @@ package com.example.becomputer;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -38,7 +39,9 @@ public class DatabaseActivity extends AppCompatActivity {
         binding.btnRemoveRecord.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(DatabaseActivity.this, "Button Clicked", Toast.LENGTH_LONG).show(); //call back fxn ho so this vanni kam gardaina
+                Intent intent = new Intent(DatabaseActivity.this , AddRecordActivity.class);
+               // Toast.makeText(DatabaseActivity.this, "Button Clicked", Toast.LENGTH_LONG).show(); //call back fxn ho so this vanni kam gardaina
+                startActivity(intent);
             }
         });
 

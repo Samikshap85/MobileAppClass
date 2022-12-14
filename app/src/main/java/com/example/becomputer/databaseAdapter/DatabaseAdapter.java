@@ -22,7 +22,7 @@ public class DatabaseAdapter extends RecyclerView.Adapter<DatabaseAdapter.Databa
     private Context context;
     private ArrayList<FoodEntity> foodEntityArrayList;
 
-    public DatabaseAdapter(Context context , ArrayList<FoodEntity>foodEntityArrayList>) {
+    public DatabaseAdapter(Context context , ArrayList<FoodEntity>foodEntityArrayList) {
         this.context = context;
         this.foodEntityArrayList = foodEntityArrayList;
     }
@@ -48,7 +48,7 @@ public class DatabaseAdapter extends RecyclerView.Adapter<DatabaseAdapter.Databa
 
     @Override
     public int getItemCount() {
-        return foodEntityArrayList.size();
+        return foodEntityArrayList.size(); //size 0 hunxa yedi return gareyna vani adapater chaldeyna
     }
 
     public class DatabaseViewHolder extends RecyclerView.ViewHolder {
