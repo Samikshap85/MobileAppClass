@@ -10,16 +10,21 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.example.becomputer.adapter.FoodEntityAdapter;
 import com.example.becomputer.app.App;
 import com.example.becomputer.database.AppDatabase;
 import com.example.becomputer.database.dao.FoodDao;
 import com.example.becomputer.database.model.FoodEntity;
 import com.example.becomputer.databinding.ActivityDatabaseBinding;
 
-public class DatabaseActivity extends AppCompatActivity {
-    private ActivityDatabaseBinding binding;
+import java.util.ArrayList;
 
+public class DatabaseActivity extends AppCompatActivity {
+
+    private ActivityDatabaseBinding binding;
+    private ArrayList<FoodEntity>foodEntityArrayList= new ArrayList<>();  // new arraylist ley empty array list assign gardinxa
     ////    private FoodDao foodDao;
+    private FoodEntityAdapter adapter;
 //
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +55,10 @@ public class DatabaseActivity extends AppCompatActivity {
                 LinearLayoutManager.VERTICAL,
                 false
         ));
+        foodEntityArrayList.addAll(App.foodDao.getAllItems());
+        adapter = new FoodEntityAdapter(DatabaseActivity.this , foodEntityArrayList);
+        binding.rvRecords.setAdapter(adapter);
+
     }
 }
 

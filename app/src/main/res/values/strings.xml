@@ -10,5 +10,6 @@
     <string name="NoAccount">Don\'t have an account</string>
     <string name="txtAddRecord">Add Record</string>
     <string name="removeRecord">Remove Record</string>
+    <string name="txtAllFood">All Food</string>
 
 </resources>

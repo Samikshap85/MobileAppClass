@@ -22,20 +22,12 @@
         <activity
             android:name=".DatabaseActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" /> <!-- intend filter is used to show which page to launch first -->
-            </intent-filter>
         </activity>
         <activity
             android:name=".ProductActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" /> <!-- intend filter is used to show which page to launch first -->
-            </intent-filter>
         </activity>
         <activity
             android:name=".DashboardActivity"
@@ -46,7 +38,11 @@
             android:exported="true" />
         <activity
             android:name=".LoginActivity"
-            android:exported="true" />
+            android:exported="true" ><intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" /> <!-- intend filter is used to show which page to launch first -->
+        </intent-filter></activity>
     </application>
 
 </manifest>
