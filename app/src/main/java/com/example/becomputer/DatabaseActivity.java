@@ -32,6 +32,7 @@ public class DatabaseActivity extends AppCompatActivity {
         binding = ActivityDatabaseBinding.inflate(getLayoutInflater());
         View view = binding.getRoot(); //find view by id garnu pardaina binding garyo vani
         setContentView(view);
+        setAppBar();
 
         binding.btnAddRecord.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,6 +60,22 @@ public class DatabaseActivity extends AppCompatActivity {
         adapter = new FoodEntityAdapter(DatabaseActivity.this , foodEntityArrayList);
         binding.rvRecords.setAdapter(adapter);
 
+        binding.rvRecords.setAdapter(adapter);
+        binding.btnRemoveRecord.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                App.foodDao.deleteAll();
+            }
+        });
+
+    }
+
+    private void setAppBar() {
+        if(getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setHomeButtonEnabled(true);
+            getSupportActionBar().setTitle(R.string.txtAllFood);
+        }
     }
 }
 

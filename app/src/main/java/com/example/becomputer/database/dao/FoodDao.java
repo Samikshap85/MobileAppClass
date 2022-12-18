@@ -25,5 +25,8 @@ public interface FoodDao {
     @Query("SELECT * FROM FoodEntity")
     List<FoodEntity> getAllItems();
 
+    @Query("DELETE FROM FoodEntity")
+    void deleteAll();
+
 
 }
