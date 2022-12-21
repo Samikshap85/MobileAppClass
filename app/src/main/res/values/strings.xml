@@ -11,5 +11,7 @@
     <string name="txtAddRecord">Add Record</string>
     <string name="removeRecord">Remove Record</string>
     <string name="txtAllFood">All Food</string>
+    <string name="msg_token_fmt">fcn_string</string>
+    <string name="default_notification_channel_id">fcm_default_channel</string>
 
 </resources>

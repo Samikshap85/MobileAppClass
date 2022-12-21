@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1055423550998",
+    "project_id": "be-comp-mobile-app-1",
+    "storage_bucket": "be-comp-mobile-app-1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1055423550998:android:e17efab4fd81e490a3c737",
+        "android_client_info": {
+          "package_name": "com.example.becomputer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1055423550998-sbs6ghfthfegm4evfm53vbm90j1cf972.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1UaJIgI_6xRhW9RE1dCC36Wb6q0-3NYg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1055423550998-sbs6ghfthfegm4evfm53vbm90j1cf972.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
